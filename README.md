@@ -1,6 +1,9 @@
 # QtIFW_Frontend
 A gui for qt installation framework to create installer for your qt projects on windows
 
+## Install
+Go to releases section
+
 
 ## Usage
 - First select your deploy folder including prod exe and dlls. (important!)
