@@ -6,8 +6,24 @@ Go to releases section
 
 
 ## Usage
-- First select your deploy folder including prod exe and dlls. (important!)
-- App Name must be same as exe name (for shortcuts)
-- Enter your version info, Publisher info and intaller filename
-- Press the create button and then app will ask a project folder (empty folder preferred)
-- Wait a couple of minutes and your installer is ready in last selected folder
+- First you have to download and install Qt Installer Framework or if you have this goto step 2
+- Select Qt Installer framework path *(example: C:/Qt/Tools/QtInstallerFramework/4.0/bin)*
+- Prepare your deploy folder
+  - Run `windeployqt` for copy neccessary dlls and some other libraries into deploy folder.
+  - Copy icons and any assets into deploy folder if you want
+- Set title for installation window
+- Set app version
+- Set publisher name
+- Set installer name
+- If you prepared banner image for setup window, enter banner image filename
+- If you prepared setup icon, enter filename
+- Choose setup style (for use banner image select Modern style)
+- Set shortcut name
+- Set target executable name for shortcut
+- Set icon filename or target exe filename for icon
+- If you want you can add any redist packages and silent switches into Redist Setup Packages section
+  - Write each package per line and seperate package name and arguments by comma 
+  > **Example:**
+  > vc_redist.x86.exe,/install,/quiet
+  > vc_redist.x64.exe,/install,/quiet
+- Hit create button then select output folder and wait for finished.
