@@ -4,6 +4,8 @@ A gui for qt installation framework to create installer for your qt projects on 
 ## Install
 Go to releases section
 
+![](https://raw.githubusercontent.com/mguludag/QtInstallerFramework_GUI/master/Screenshot%202020-11-26%20233724.png)
+
 
 ## Usage
 - First you have to download and install Qt Installer Framework or if you have this goto step 2
