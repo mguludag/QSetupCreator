@@ -6,156 +6,353 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>431</width>
-    <height>391</height>
+    <width>600</width>
+    <height>600</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>600</width>
+    <height>600</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>Path of Qt bin</string>
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="0" column="0" colspan="2">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Qt IFW Path</string>
       </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Path of Qt IFW bin</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLineEdit" name="lineEdit_qtbinpath">
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>Qt Installer framework bin path</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButton_qtifw">
+           <property name="text">
+            <string>...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </widget>
     </item>
-    <item row="3" column="1">
-     <widget class="QLineEdit" name="lineEdit_version">
-      <property name="minimumSize">
-       <size>
-        <width>200</width>
-        <height>0</height>
-       </size>
+    <item row="1" column="0">
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="title">
+       <string>Project</string>
       </property>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="label_5">
-      <property name="text">
-       <string>Version</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="1">
-     <widget class="QLineEdit" name="lineEdit_installername">
-      <property name="minimumSize">
-       <size>
-        <width>232</width>
-        <height>0</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QLineEdit" name="lineEdit_qtbinpath">
-        <property name="minimumSize">
-         <size>
-          <width>200</width>
-          <height>0</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QToolButton" name="toolButton_qtifw">
-        <property name="text">
-         <string>...</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="2" column="1">
-     <widget class="QLineEdit" name="lineEdit_appname">
-      <property name="minimumSize">
-       <size>
-        <width>200</width>
-        <height>0</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="0">
-     <widget class="QLabel" name="label_4">
-      <property name="text">
-       <string>Installer Name</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>App Name</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QLabel" name="label_6">
-      <property name="text">
-       <string>Publisher</string>
-      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Application Name</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1" colspan="3">
+        <widget class="QLineEdit" name="lineEdit_pub">
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>publisher name</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Installer Name</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1" colspan="3">
+        <widget class="QComboBox" name="comboBox_style">
+         <item>
+          <property name="text">
+           <string>Aero</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Modern</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="1" colspan="3">
+        <widget class="QLineEdit" name="lineEdit_appname">
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="placeholderText">
+          <string>app name it shows on installer title</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Publisher</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" colspan="3">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLineEdit" name="lineEdit_deploy">
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can add&lt;span style=&quot; font-weight:600;&quot;&gt; banner.png&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;setup.ico&lt;/span&gt; into deploy folder for installer icon and banner&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="placeholderText">
+            <string>deploy folder including app and files</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButton_deploy">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can add&lt;span style=&quot; font-weight:600;&quot;&gt; banner.png&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;setup.ico&lt;/span&gt; into deploy folder for installer icon and banner&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Version</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1" colspan="3">
+        <widget class="QLineEdit" name="lineEdit_installername">
+         <property name="minimumSize">
+          <size>
+           <width>232</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="placeholderText">
+          <string>name of created installer package exe</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Your Deploy Folder</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Installer Style</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1" colspan="3">
+        <widget class="QLineEdit" name="lineEdit_version">
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="placeholderText">
+          <string>app version ex. 1.0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1" colspan="3">
+        <widget class="QLineEdit" name="lineEdit_banner">
+         <property name="placeholderText">
+          <string>banner image filename in deploy folder</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_11">
+         <property name="text">
+          <string>Banner Image</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="label_13">
+         <property name="text">
+          <string>Setup Icon</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1" colspan="3">
+        <widget class="QLineEdit" name="lineEdit_setupicon">
+         <property name="placeholderText">
+          <string>setup icon filename in deploy folder</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
     <item row="1" column="1">
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QLineEdit" name="lineEdit_deploy">
-        <property name="minimumSize">
-         <size>
-          <width>200</width>
-          <height>0</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QToolButton" name="toolButton_deploy">
-        <property name="text">
-         <string>...</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="4" column="1">
-     <widget class="QLineEdit" name="lineEdit_pub">
-      <property name="minimumSize">
-       <size>
-        <width>200</width>
-        <height>0</height>
-       </size>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="title">
+       <string>Shortcuts</string>
       </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>Name</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" colspan="2">
+        <widget class="QLineEdit" name="lineEdit_nameshortcut">
+         <property name="placeholderText">
+          <string>shortcut name</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>Target</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1" colspan="2">
+        <widget class="QLineEdit" name="lineEdit_target">
+         <property name="placeholderText">
+          <string>target.exe</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_12">
+         <property name="text">
+          <string>Icon</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1" colspan="2">
+        <widget class="QLineEdit" name="lineEdit_icon">
+         <property name="placeholderText">
+          <string>icon.ico or app.exe</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QCheckBox" name="checkBox_desktop">
+         <property name="text">
+          <string>Desktop</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QCheckBox" name="checkBox_startmenu">
+         <property name="text">
+          <string>Start Menu</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="2">
+     <widget class="QGroupBox" name="groupBox_6">
+      <property name="title">
+       <string>Redist Setup Packages</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_6">
+       <item row="1" column="0">
+        <widget class="QTextEdit" name="textEdit">
+         <property name="lineWrapMode">
+          <enum>QTextEdit::NoWrap</enum>
+         </property>
+         <property name="acceptRichText">
+          <bool>true</bool>
+         </property>
+         <property name="placeholderText">
+          <string>Example: vc_redist_x64.exe,/install,/quiet</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>Write package names and additional args one package per line seperated by comma</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_status">
       <property name="text">
        <string/>
       </property>
      </widget>
     </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>Your Deploy Folder</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="1">
-     <spacer name="verticalSpacer">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>40</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="7" column="0" colspan="2">
+    <item row="3" column="0" colspan="2">
      <widget class="QPushButton" name="pushButton">
       <property name="text">
        <string>Create</string>
@@ -169,7 +366,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>431</width>
+     <width>600</width>
      <height>28</height>
     </rect>
    </property>

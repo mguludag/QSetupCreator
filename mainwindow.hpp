@@ -27,15 +27,19 @@
 #ifndef MAINWINDOW_HPP
 #define MAINWINDOW_HPP
 
+#include "settings.hpp"
+
 #include <QDateTime>
 #include <QDir>
 #include <QDirIterator>
+#include <QElapsedTimer>
 #include <QFile>
 #include <QFileDialog>
 #include <QMainWindow>
 #include <QProcess>
 #include <QStringList>
 #include <QTextStream>
+#include <QThread>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -57,10 +61,15 @@ private slots:
 
   void on_pushButton_clicked();
 
+  QString process_redist();
+
 private:
+  qint64 duration = 0;
   QDir currDir;
+  QElapsedTimer elap_timer;
+  QThread *thread;
   QProcess m_proc;
-  QString depDirName, vcredist;
+  QString depDirName, ifw_path;
   Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_HPP
