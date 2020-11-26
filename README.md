@@ -24,6 +24,8 @@ Go to releases section
 - If you want you can add any redist packages and silent switches into Redist Setup Packages section
   - Write each package per line and seperate package name and arguments by comma 
   > **Example:**
+  > ```
   > vc_redist.x86.exe,/install,/quiet
   > vc_redist.x64.exe,/install,/quiet
+  > ```
 - Hit create button then select output folder and wait for finished.
