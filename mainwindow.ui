@@ -27,46 +27,6 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_4">
-    <item row="0" column="0" colspan="2">
-     <widget class="QGroupBox" name="groupBox">
-      <property name="title">
-       <string>Qt IFW Path</string>
-      </property>
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>Path of Qt IFW bin</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <layout class="QHBoxLayout" name="horizontalLayout">
-         <item>
-          <widget class="QLineEdit" name="lineEdit_qtbinpath">
-           <property name="minimumSize">
-            <size>
-             <width>200</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="placeholderText">
-            <string>Qt Installer framework bin path</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QToolButton" name="toolButton_qtifw">
-           <property name="text">
-            <string>...</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
-    </item>
     <item row="1" column="0">
      <widget class="QGroupBox" name="groupBox_2">
       <property name="title">
@@ -242,6 +202,27 @@
          </property>
         </widget>
        </item>
+       <item row="1" column="1" colspan="3">
+        <widget class="QComboBox" name="comboBox_dest">
+         <item>
+          <property name="text">
+           <string>System drive</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Program files</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_14">
+         <property name="text">
+          <string>Installation Destination</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>
@@ -324,6 +305,9 @@
       <layout class="QGridLayout" name="gridLayout_6">
        <item row="1" column="0">
         <widget class="QTextEdit" name="textEdit">
+         <property name="tabChangesFocus">
+          <bool>true</bool>
+         </property>
          <property name="lineWrapMode">
           <enum>QTextEdit::NoWrap</enum>
          </property>
@@ -352,6 +336,46 @@
       </property>
      </widget>
     </item>
+    <item row="0" column="0" colspan="2">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Qt IFW Path</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Path of Qt IFW bin</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLineEdit" name="lineEdit_qtbinpath">
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>Qt Installer framework bin path</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButton_qtifw">
+           <property name="text">
+            <string>...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
     <item row="3" column="0" colspan="2">
      <widget class="QPushButton" name="pushButton">
       <property name="text">
@@ -373,6 +397,27 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <tabstops>
+  <tabstop>lineEdit_qtbinpath</tabstop>
+  <tabstop>toolButton_qtifw</tabstop>
+  <tabstop>lineEdit_deploy</tabstop>
+  <tabstop>toolButton_deploy</tabstop>
+  <tabstop>comboBox_dest</tabstop>
+  <tabstop>lineEdit_appname</tabstop>
+  <tabstop>lineEdit_version</tabstop>
+  <tabstop>lineEdit_pub</tabstop>
+  <tabstop>lineEdit_installername</tabstop>
+  <tabstop>lineEdit_banner</tabstop>
+  <tabstop>lineEdit_setupicon</tabstop>
+  <tabstop>comboBox_style</tabstop>
+  <tabstop>lineEdit_nameshortcut</tabstop>
+  <tabstop>lineEdit_target</tabstop>
+  <tabstop>lineEdit_icon</tabstop>
+  <tabstop>checkBox_desktop</tabstop>
+  <tabstop>checkBox_startmenu</tabstop>
+  <tabstop>textEdit</tabstop>
+  <tabstop>pushButton</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

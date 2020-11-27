@@ -67,6 +67,9 @@ void MainWindow::on_pushButton_clicked() {
         dir.mkdir(ui->lineEdit_appname->text());
         // dir.setCurrent(dir.path().remove('.') +
         // ui->lineEdit_appname->text());
+        QStringList target_dir;
+        target_dir << "@RootDir@"
+                   << "@ApplicationsDir@";
         dir.cd(ui->lineEdit_appname->text());
         QFile file(dir.path() + "/config.xml");
         if (file.open(QFile::ReadWrite)) {
@@ -100,7 +103,8 @@ void MainWindow::on_pushButton_clicked() {
               "<!-- Directory name is used in component.xml -->\n\
           <StartMenuDir>" +
               ui->lineEdit_appname->text() + "</StartMenuDir>\n\
-          <TargetDir>@ApplicationsDir@/" +
+          <TargetDir>" +
+              target_dir.at(ui->comboBox_dest->currentIndex()) + "/ " +
               ui->lineEdit_appname->text() + "</TargetDir>\n\
         </Installer>\n";
           stream << config;
@@ -221,9 +225,10 @@ void MainWindow::on_pushButton_clicked() {
 QString MainWindow::process_redist() {
   QString result{};
   QString data = ui->textEdit->toPlainText();
-  QString head = "component.addElevatedOperation(\"Execute\", "
-                 "\"@TargetDir@/" +
-                 depDirName + "/";
+  QString head =
+      "component.addElevatedOperation(\"Execute\", \"{0,3010,1638,5100}\", "
+      "\"@TargetDir@/" +
+      depDirName + "/";
   QString tail = ");\n";
   QStringList strList = data.split(QRegExp("[\n]"), QString::SkipEmptyParts);
 
