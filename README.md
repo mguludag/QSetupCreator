@@ -1,4 +1,4 @@
-# QtIFW_Frontend
+# QtInstallerFramework_GUI
 A gui for qt installation framework to create installer for your qt projects on windows
 
 ## Install
