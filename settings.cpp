@@ -33,14 +33,14 @@ void Settings::init(Settings::Format format, const QString &name) {
     m_instance = new Settings(format, name);
 }
 
-int Settings::loadStyle() {
+Settings::Theme Settings::loadStyle() {
   int val;
   m_instance->m_settingsObj->beginGroup("Style");
   val = m_instance->m_settingsObj
             ->value("Theme", static_cast<int>(Theme::lightFusion))
             .toInt(); // default theme is lightFusion
   m_instance->m_settingsObj->endGroup();
-  return val;
+  return static_cast<Theme>(val);
 }
 
 void Settings::setStyle(const Settings::Theme val) {

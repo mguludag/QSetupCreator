@@ -27,8 +27,7 @@
 #ifndef MAINWINDOW_HPP
 #define MAINWINDOW_HPP
 
-#include "settings.hpp"
-
+#include "dialog.hpp"
 #include <QDateTime>
 #include <QDir>
 #include <QDirIterator>
@@ -55,7 +54,6 @@ public:
   ~MainWindow();
 
 private slots:
-  void on_toolButton_qtifw_clicked();
 
   void on_toolButton_deploy_clicked();
 
@@ -63,13 +61,50 @@ private slots:
 
   QString process_redist();
 
+  void createProjDirs();
+
+  void createConfigXML();
+
+  void createInstallScript();
+
+  void createPackageXML();
+
+  void createArchive();
+
+  void createInstaller();
+
+  void createFiles();
+
+  void on_pushButton_back_clicked();
+
+  void on_pushButton_start_clicked();
+
+  void on_toolButton_clicked();
+
+  void on_toolButton_icon_clicked();
+
+  void on_toolButton_setupbanner_clicked();
+
+  void on_toolButton_setupicon_clicked();
+
+  void on_actionSet_Qt_IFW_Path_triggered();
+
+  void on_actionAbout_triggered();
+
+  void on_actionLight_triggered();
+
+  void on_actionDark_triggered();
+
+  void disableWidgets(bool arg);
+
 private:
   qint64 duration = 0;
-  QDir currDir;
+  QDir currDir, projDir;
   QElapsedTimer elap_timer;
   QThread *thread;
   QProcess m_proc;
-  QString depDirName, ifw_path;
+  QString depDirName, ifw_path, configXML, packageXML, installscriptqs;
   Ui::MainWindow *ui;
+  Dialog d;
 };
 #endif // MAINWINDOW_HPP

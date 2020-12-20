@@ -29,7 +29,7 @@ public:
   \fn int loadStyle
   \brief Loads current application style from settings file or registry
   */
-  static int loadStyle();
+  static Theme loadStyle();
 
   /*!
   \fn void setStyle
