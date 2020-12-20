@@ -4,7 +4,9 @@ A gui for qt installation framework to create installer for your qt projects on 
 ## Download
 <a href="https://github.com/mguludag/QSetupCreator/releases/latest/download/setup_vc17x86.7z"><img alt="GitHub Releases" src="https://img.shields.io/github/downloads/mguludag/QSetupCreator/latest/total?label=Download%20(vc17_x86)&style=for-the-badge">
 
-![](https://raw.githubusercontent.com/mguludag/QtInstallerFramework_GUI/master/Screenshot%202020-11-26%20233724.png)
+![](https://raw.githubusercontent.com/mguludag/QSetupCreator/master/qst1.png)
+![](https://raw.githubusercontent.com/mguludag/QSetupCreator/master/qst2.png)
+![](https://raw.githubusercontent.com/mguludag/QSetupCreator/master/qst3.png)
 
 
 ## Usage
