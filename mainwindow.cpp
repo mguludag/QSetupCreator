@@ -176,7 +176,7 @@ Component.prototype.createOperations = function()\n\
                  depDirName + "/" +
                  (icon ? ui->lineEdit_target->text()
                        : ui->lineEdit_icon->text()) +
-                 "\"," + (icon ? "\"iconId=1\", " : " ") + "\"description=" +
+                 "\"," + (icon ? "\"iconId=0\", " : " ") + "\"description=" +
                  ui->lineEdit_nameshortcut->text() + " Executable\");\n"
            : "") +
       (ui->checkBox_desktop->isChecked()
@@ -189,7 +189,7 @@ Component.prototype.createOperations = function()\n\
                  depDirName + "/" +
                  (icon ? ui->lineEdit_target->text()
                        : ui->lineEdit_icon->text()) +
-                 "\"," + (icon ? "\"iconId=1\", " : " ") + "\"description=" +
+                 "\"," + (icon ? "\"iconId=0\", " : " ") + "\"description=" +
                  ui->lineEdit_nameshortcut->text() + " Executable\");\n"
            : "") +
       "    }\n" +
