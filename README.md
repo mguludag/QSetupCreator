@@ -1,4 +1,4 @@
-# QtInstallerFramework_GUI
+# QSetupCreator
 A gui for qt installation framework to create installer for your qt projects on windows
 
 ## Download
